@@ -124,7 +124,7 @@ function extractTitle(line: string, merchant: string): string {
 
 // Raw PDF stream / object keywords that must never become ledger rows.
 const PDF_NOISE =
-  /\b(stream|endstream|obj|endobj|xref|trailer|startxref|DeviceRGB|DeviceGray|DeviceCMYK|ColorSpace|Indexed|FlateDecode|MediaBox|Font|FontDescriptor|Encoding|Filter|Length|Contents|Metadata|Producer|CreationDate|Linearized)\b/i;
+  /\b(Paytm|PAYTM|stream|endstream|obj|endobj|xref|trailer|startxref|DeviceRGB|DeviceGray|...\b/i;
 
 export function parseStatementText(raw: string): ParsedTxn[] {
   const lines = raw
